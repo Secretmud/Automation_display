@@ -1,0 +1,18 @@
+<!doctype html>
+<title>{% block title %}{% endblock %}Observing</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+  <h1>Panel - For automation</h1>
+  <ul>
+  </ul>
+</nav>
+<section class="content">
+  <header>
+  </header>
+    <h2 class="flash">Status: {{ values }}</h2>
+    <div class="flash">Number of refreshes: {{ test }}</div>
+    <form action="/" method="post">
+        <input type="submit" class="button" name="submit" value="blink">
+        <input type="submit" class="button" name="submit" value="solid">
+    </form>
+</section>
