@@ -5,11 +5,11 @@ I made this to learn pyserial and flask.
 ## Requirements
 
 flask
-[code]
+```bash
 pip install flask
-[/code]
+```
 serial
-[code]
+```bash
 pip install pyserial
-[/code]
+```
 Arduino
