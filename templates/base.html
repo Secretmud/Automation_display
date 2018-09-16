@@ -4,20 +4,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}{% endblock %}Observing</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+        <script async src="{{url_for('static', filename='main.js')}}"></script>
     </head>
-    <body>
+    <body onLoad="update_status({{values}})">
         <div class="nav">
           <ul class="menu">
-              <li>Waapp: {{ values }}</li>
-              <li>Woop: {{ values }}</li>
-              <li>test: 400*</li>
-              <li>terer sad </li>
+              <li>Waapp: <p class="status"></p></li>
+              <li>Woop: <p class="status"></p></li>
+              <li>test: <p class="status"></p></li>
+              <li>terer <p class="status"></p> </li>
           </ul>
         </div>
         <div class="control">
             <div class="child">
                 <p>LED- Control</p>
-                <div class="status">Status: {{ values }}</div>
+                <div>Status: <p class="status">{{ values }}</p></div>
                 <form action="/" method="post">
                     <input type="submit" class="button" name="submit" value="blink">
                     <input type="submit" class="button" name="submit" value="solid">
