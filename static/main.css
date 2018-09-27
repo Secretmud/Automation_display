@@ -9,6 +9,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     grid-gap: 20px;
+    padding-left: 0
 }
 .menu > li {
     list-style: none;
@@ -19,9 +20,10 @@ body {
 .control {
     display: grid;
     grid-gap: 15px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr))
 }
 .child {
     padding: 1em;
-    
+    word-wrap: break-word;    
 }
