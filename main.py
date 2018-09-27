@@ -6,7 +6,8 @@ app = Flask(__name__)
 ser = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
 @app.route("/", methods=['GET', 'POST'])
 def test():
-    data = ser.readline().decode('utf-8')
+    #data = ser.readline().decode('utf-8')
+    data = "test"
     if request.method == 'POST':
         if request.form["submit"] == "blink":
             data = "blink"
