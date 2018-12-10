@@ -3,27 +3,24 @@ body {
     font-family: monospace;
     margin: 0;
 }
-.nav {
+.head {
+    height: 200px;
+    background: red;
+    width: 100%;
 }
-.menu {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-    grid-gap: 20px;
-    padding-left: 0
-}
-.menu > li {
-    list-style: none;
-}
-/*
- *  Grid layout. 
- * */
 .control {
+    position: relative;
+    padding: 1em;
     display: grid;
-    grid-gap: 15px;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr))
+    grid-template-columns: repeat(auto-fill, minmax(25%, 30%));
+    grid-gap: 20px;
 }
 .child {
-    padding: 1em;
-    word-wrap: break-word;    
+    padding: 0.3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+    border: 1px solid black;
+    box-shadow: 6px 7px lightgray;
+    word-wrap: break-word;
 }

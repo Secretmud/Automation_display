@@ -1,29 +1,41 @@
 <!doctype html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% block title %}{% endblock %}Observing</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-        <script async src="{{url_for('static', filename='main.js')}}"></script>
-    </head>
-    <body onLoad="update_status({{values}})">
-        <div class="nav">
-          <ul class="menu">
-              <li>Waapp: <p class="status"></p></li>
-              <li>Woop: <p class="status"></p></li>
-              <li>test: <p class="status"></p></li>
-              <li>terer <p class="status"></p> </li>
-          </ul>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Observing{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <script async src="{{url_for('static', filename='main.js')}}"></script>
+</head>
+
+<body onLoad="update_status({{values}})">
+    <div class="head">
+        <div>Status:
+            <p class="status">{{ values }}</p>
         </div>
-        <div class="control">
-            <div class="child">
-                <p>LED- Control</p>
-                <div>Status: <p class="status">{{ values }}</p></div>
-                <form action="/" method="post">
-                    <input type="submit" class="button" name="submit" value="blink">
-                    <input type="submit" class="button" name="submit" value="solid">
-                </form>
-            </div>
+    </div>
+    <div class="control">
+        <div class="child">
+            <h2>Arm and light controlpanel</h2>
+            <p>This program is a sample program written to learn how to manipulate the Serial interface using a arduino</p>
         </div>
-    </body>
+        <div class="child">
+            <p>ARM- Control</p>
+            <form action="/" method="post">
+                <input type="submit" class="button" name="submit" value="Up">
+                <input type="submit" class="button" name="submit" value="Down">
+                <input type="submit" class="button" name="submit" value="Left">
+                <input type="submit" class="button" name="submit" value="Right">
+            </form>
+        </div>
+        <div class="child">
+            <p>LED- Control</p>
+            <form action="/" method="post">
+                <input type="submit" class="button" name="submit" value="blink">
+                <input type="submit" class="button" name="submit" value="solid">
+            </form>
+        </div>
+    </div>
+</body>
+
 </html>
